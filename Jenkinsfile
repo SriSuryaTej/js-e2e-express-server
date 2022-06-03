@@ -19,7 +19,7 @@ pipeline {
 	                sh 'npm run build'
 	            }
 	        }
-	        stage('Build') {
+	        stage('Pack') {
 	            steps {
 	                sh 'npm run pack'
 	            }
