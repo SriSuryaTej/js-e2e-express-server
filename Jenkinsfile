@@ -55,5 +55,6 @@ pipeline {
           serverId: "JFROG_OSS"
              )
           }
+     }
   }
 }
