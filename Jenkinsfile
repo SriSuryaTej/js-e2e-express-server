@@ -1,7 +1,7 @@
 pipeline {
   agent {label 'NODE_JS'}
   tools {
-      node_js 'NODE_JS'
+      nodejs 'NODE_JS'
   }
   stages {
         
