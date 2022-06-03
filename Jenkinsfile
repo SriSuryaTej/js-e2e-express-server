@@ -35,11 +35,6 @@ pipeline {
         sh 'nohup npm start &'
       }
     }
-    stage('packing ') {
-      steps {
-        sh 'npm run pack'
-          }
-        }
     stage('Test results') {
       steps {
         sh 'npm test'
