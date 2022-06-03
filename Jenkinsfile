@@ -37,7 +37,7 @@ pipeline {
     }
     stage('Quality Check'){
       steps{
-        withSonarQubeEnv('SONAR_SCANNER')
+        sh 'npm install sonarqube-scanner --save-dev'
         sh 'npm run sonar'
       }
     }
