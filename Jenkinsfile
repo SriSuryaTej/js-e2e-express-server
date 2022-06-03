@@ -45,7 +45,7 @@ pipeline {
       steps{
         withSonarQubeEnv(installationName: 'SONAR_SCANNER', envOnly: true, credentialsId: 'SONAR_TOKEN'){
           sh 'npm install sonarqube-scanner --save-dev'
-          sh 'npm run sonar:sonar'
+          sh 'npm run sonar-scanner'
         }
       }
     }
