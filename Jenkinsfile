@@ -35,6 +35,17 @@ pipeline {
         sh 'nohup npm start &'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'npm run pack'
+          }
+        }
+    stage('Test results') {
+      steps {
+        sh 'npm test'
+          }
+        }
+
     stage('Quality Check'){
       steps{
         sh 'npm install sonarqube-scanner --save-dev'
