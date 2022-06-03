@@ -19,11 +19,6 @@ pipeline {
 	                sh 'npm run build'
 	            }
 	        }
-	        stage('Pack') {
-	            steps {
-	                sh 'npm run pack'
-	            }
-	        }
 	        stage('Test results') {
 	            steps {
 	                sh 'npm test'
