@@ -48,7 +48,7 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
-  }
+  },
   "scripts": {
     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   }
