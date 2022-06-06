@@ -6,7 +6,7 @@ pipeline {
 	    stages {
 	        stage('SourceCode') {
 	            steps {
-	                git branch: 'main', url: 'https://github.com/arvindmahat/js-e2e-express-server.git'
+	                git branch: 'declarative', url: 'https://github.com/SriSuryaTej/js-e2e-express-server.git'
 	            }
 	        }
 	        stage('Dependencies') {
