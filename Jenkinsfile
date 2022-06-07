@@ -31,8 +31,7 @@ pipeline {
 	            }
 	        }
 	        stage ('Artifactory configuration') {
-	            steps {
-	                
+	            steps {	                
 	                rtNpmDeployer (
 	                    id: "NPM_DEPLOYER",
 	                    serverId: "JFROG_OSS",
@@ -40,21 +39,14 @@ pipeline {
 	                )
 	            }
 	        }
-	
-
-	      
-	
-
 	        stage ('Exec npm publish') {
 	            steps {
 	                rtNpmPublish (
-	                    tool: 'Node_JS',
+	                    tool: 'NODE_JS',
 	                    deployerId: "NPM_DEPLOYER"
 	                )
 	            }
 	        }
-	
-
 	        stage ('Publish build info') {
 	            steps {
 	                rtPublishBuildInfo (
@@ -63,5 +55,4 @@ pipeline {
 	            }
 	        }
 	    }
-	}
-	              
+	}           
